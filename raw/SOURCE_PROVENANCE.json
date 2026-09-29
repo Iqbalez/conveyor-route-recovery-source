@@ -2,7 +2,7 @@
   "dataset_title": "Anonymous Conveyor Scan Logs — version 3.0.0",
   "source_type": "Original creator-owned simulation",
   "source_url": "https://github.com/Iqbalez/conveyor-route-recovery-source",
-  "publication_status": "PUBLISHED_VERIFIED: original generator, raw README and provenance, separate-key demo, release metadata and license notices are public; frozen raw data and creator key are excluded",
+  "publication_status": "PUBLISHED_VERIFIED: full observation-only corpus, original generator, raw README and provenance, release metadata and license notices are public; creator parcel identity, private answers and master key are excluded",
   "creation_method": "Pinned raw/generate.py with Python 3.12.10 and NumPy 2.5.3 and a creator-only 256-bit master key; four banks and 40 parcels per shift",
   "source_csv_sha256": "58c41b9e62386710edeb453d233fe50b9a76eaf346952589d8cff02fb9f2c341",
   "independent_units": 4000,
