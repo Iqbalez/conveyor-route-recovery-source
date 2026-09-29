@@ -1,9 +1,15 @@
-# Conveyor Route Recovery — original source
+# Anonymous Conveyor Scan Logs — version 3.0.0
 
-Original creator-owned simulation for the Conveyor Route Recovery challenge, version 3.0.0. Four scanner banks observe forty parcels per independent shift. The challenge asks solvers to recover each exit scan's bank-0, bank-1 and bank-2 observations. This is simulated data, not measured factory performance.
+This is the original creator-owned synthetic dataset source for the **Conveyor Route Recovery** challenge. The registered raw dataset contains 4,000 independent shifts, each with 40 parcels observed once at each of four scanner banks: 640,000 scans. The task is to recover each exit scan's bank-0, bank-1 and bank-2 observations. This is simulated data, not measured factory performance.
 
-The registered raw dataset is uploaded separately to the challenge platform. This public repository excludes the frozen raw CSV, the creator master key, private answers, evaluation labels, model predictions and local reports. Publishing those files could expose held-out targets.
+## Registered raw dataset
 
-The original generator is in `raw/generate.py`. The frozen raw ZIP contains 4,000 shifts and was created with a private 256-bit master key; the generator alone cannot reproduce that key or those exact shifts. `raw/GENERATION_METADATA.json` records its versions and SHA256 commitments. GitHub's editor normalizes the generator to LF line endings, while its frozen raw-ZIP SHA256 refers to the original CRLF bytes; the source text is otherwise identical. A safe public demonstration is in `raw/generate_demo.py` and uses a separate example key. The code is MIT-licensed; the original simulated data are CC0 1.0.
+The separately uploaded `raw_upload.zip` contains exactly six root files: `shifts.csv`, `README.md`, `LICENSE_DATA.md`, `SOURCE_PROVENANCE.json`, `generate.py` and `GENERATION_METADATA.json`. The CSV has 4,000 rows with columns `shift_id,bank0,bank1,bank2,bank3`. Each bank cell is a JSON array of 40 scans with creator-side parcel identity. The frozen `shifts.csv` SHA-256 is `58c41b9e62386710edeb453d233fe50b9a76eaf346952589d8cff02fb9f2c341`.
 
-The challenge's `prepare.py` makes a deterministic 3,000/1,000 whole-shift train/evaluation split. The score is exact complete-history accuracy from 0 to 1. Public training inputs and labels may be used for fitting; evaluation observations are inference-only. `prepare.py`, `grade.py`, the raw ZIP, and participant documents are delivered in the platform challenge upload. This repository documents the dataset's origin and licenses.
+This repository publishes the generator, raw README, source provenance, release metadata and license notices, but excludes the benchmark `shifts.csv` and creator master key. Those raw rows contain hidden evaluation correspondence and must be processed by the platform's `prepare.py`, not exposed as participant inputs. The raw ZIP is provided directly in the challenge registration.
+
+## Reproduction and rights
+
+`raw/generate.py` is the original generator. `raw/GENERATION_METADATA.json` pins its raw-upload byte hash, Python 3.12.10, NumPy 2.5.3 and the CSV hash. GitHub's text editor normalized line endings in the public generator copy; the source text is identical after newline normalization. Recreating the exact benchmark also requires the withheld creator key. `raw/generate_demo.py` uses a separate example key to generate four safe example shifts that do not reproduce the benchmark.
+
+The original simulated data are **CC0 1.0**; the source code is **MIT**. The platform upload contains `prepare.py`, `grade.py`, participant documentation and the registered raw ZIP. Preparation deterministically creates 3,000 training and 1,000 evaluation shifts, with private evaluation answers.
