@@ -1,10 +1,16 @@
 {
-  "title": "Anonymous Conveyor Scan Logs — observation-only source edition",
+  "title": "Anonymous Conveyor Scan Logs \u2014 observation-only source edition",
   "license": "CC0 1.0",
   "origin": "Original creator-owned simulation from the same frozen 4,000-shift corpus as the challenge upload",
   "independent_shifts": 4000,
   "scans": 640000,
-  "columns": ["case_id", "bank0", "bank1", "bank2", "bank3"],
+  "columns": [
+    "case_id",
+    "bank0",
+    "bank1",
+    "bank2",
+    "bank3"
+  ],
   "features_only": true,
   "hidden_evaluation_correspondence_included": false,
   "source_public_feature_hashes": {
@@ -12,9 +18,29 @@
     "test.csv": "8d9c13b2917408a50cc1b0f6724c90b2615264ca639c6a407beee4b4bde90aff"
   },
   "files": [
-    {"file": "observations-01.csv", "rows": 1000, "bytes": 20056504, "sha256": "874f386cec73539a3f0286276276ea01a34005804eafcaae39cd1181c7f4bc02"},
-    {"file": "observations-02.csv", "rows": 1000, "bytes": 20057299, "sha256": "1d3b27583aba8e1b65e5bd8051ac6a7c82feaeaf892227f1bb083fb965bcc48a"},
-    {"file": "observations-03.csv", "rows": 1000, "bytes": 20057065, "sha256": "e40bf711db6ce22d42dd9dd2b1bf9a1db4cd146c57703451255e542c5366b63b"},
-    {"file": "observations-04.csv", "rows": 1000, "bytes": 20055862, "sha256": "5b7d0ad287a81c8f219ff1e60b26d5d463edbc05e3e17b13b0a83666105d9fb6"}
+    {
+      "file": "observations-01.csv",
+      "rows": 1000,
+      "bytes": 20056504,
+      "sha256": "874f386cec73539a3f0286276276ea01a34005804eafcaae39cd1181c7f4bc02"
+    },
+    {
+      "file": "observations-02.csv",
+      "rows": 1000,
+      "bytes": 20057299,
+      "sha256": "1d3b27583aba8e1b65e5bd8051ac6a7c82feaeaf892227f1bb083fb965bcc48a"
+    },
+    {
+      "file": "observations-03.csv",
+      "rows": 1000,
+      "bytes": 20057065,
+      "sha256": "e40bf711db6ce22d42dd9dd2b1bf9a1db4cd146c57703451255e542c5366b63b"
+    },
+    {
+      "file": "observations-04.csv",
+      "rows": 1000,
+      "bytes": 20055862,
+      "sha256": "5b7d0ad287a81c8f219ff1e60b26d5d463edbc05e3e17b13b0a83666105d9fb6"
+    }
   ]
 }
