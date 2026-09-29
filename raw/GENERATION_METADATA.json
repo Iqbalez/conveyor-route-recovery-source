@@ -1,0 +1,10 @@
+{
+  "release": "3.0.0",
+  "generator_file": "generate.py",
+  "generator_sha256": "2da5e5532607ff2639a5e497827cf39201f4bbf6f1114f06ce650db0fd8fc2de",
+  "python_version": "3.12.10",
+  "numpy_version": "2.5.3",
+  "master_key_policy": "Creator-only; excluded from upload because it deterministically derives all hidden links",
+  "raw_csv_sha256": "58c41b9e62386710edeb453d233fe50b9a76eaf346952589d8cff02fb9f2c341",
+  "preparation_note": "shifts.csv is the authoritative frozen raw corpus; prepare.py does not regenerate it"
+}
