@@ -1,3 +1,3 @@
-# Anonymous Conveyor Scan Logs v3.0.0
+# Anonymous Conveyor Scan Logs — version 3.0.0
 
 Original simulated data, not measured facility outcomes. Exactly six root files: shifts.csv, README.md, LICENSE_DATA.md, SOURCE_PROVENANCE.json, generate.py and GENERATION_METADATA.json. shifts.csv has 4,000 unique shift rows and 640,000 scans. Each bank contains 40 scans with creator parcel identity; prepare.py removes identity from features and creates training/evaluation outputs. Pinned generator and dependency versions accompany the frozen raw corpus. The creator master key is excluded; prepare.py reproduces outputs from shifts.csv without it. This raw corpus contains evaluation truth and is never participant input.
